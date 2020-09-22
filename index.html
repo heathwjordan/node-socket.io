@@ -9,9 +9,17 @@
         el = document.getElementById('server-time');
         el.innerHTML = 'Server time: ' + timeString;
       });
+
+      socket.on('ppp', (myParam) => {
+        el = document.getElementById('server-ppp');
+        el.innerHTML = 'Server ppp: ' + myParam;
+      });
+
+
     </script>
   </head>
   <body>
     <p id="server-time"></p>
+    <p id="server-ppp"></p>
   </body>
 </html>

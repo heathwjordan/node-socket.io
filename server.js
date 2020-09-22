@@ -13,8 +13,9 @@ const server = express()
 const io = socketIO(server);
 
 io.on('connection', (socket) => {
-  console.log('Client connected on ${PORT}');
-  socket.on('disconnect', () => console.log('Client disconnected'));
+  console.log('Client connected5');
+  socket.on('disconnect', () => console.log('Client disconnected6'));
 });
 
 setInterval(() => io.emit('time', new Date().toTimeString() + "dd" + PORT), 1000);
+setInterval(() => io.emit('ppp', PORT.toString()), 1000);
